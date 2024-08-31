@@ -26,8 +26,8 @@ export default function TranslateZContainer({ children }) {
   );
   const translateZ = useSpring(translateZRaw, {
     mass: 1,
-    stiffness: 200,
-    damping: 40,
+    stiffness: 100,
+    damping: 30,
   });
 
   return (

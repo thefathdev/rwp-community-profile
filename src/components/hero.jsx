@@ -23,7 +23,7 @@ export default function Hero() {
             quality={100}
           />
           <TranslateZContainer>
-            <div className="flex items-center justify-center overflow-visible relative">
+            <div className="flex items-center justify-center overflow-visible w-screen relative">
               <Marquee className={"[--duration:10s] overflow-visible"}>
                 <span className="heading-1 text-center  ">
                   Remote Worker Pontianak
@@ -33,8 +33,8 @@ export default function Hero() {
           </TranslateZContainer>
 
           <div className="w-[400px] z-[5] h-[400px] overflow-hidden absolute flex justify-center items-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-            <div className="absolute w-screen">
-              <Marquee className={"[--duration:10s]"}>
+            <div className="absolute w-screen flex items-center justify-center overflow-visible">
+              <Marquee className={"[--duration:10s] overflow-visible"}>
                 <span className="heading-1 text-white text-center whitespace-nowrap">
                   Remote Worker Pontianak
                 </span>
