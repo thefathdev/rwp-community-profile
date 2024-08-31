@@ -2,7 +2,7 @@ import Rotated3DContainer from "../ui/rotated-3d-container";
 
 export default function Pillars() {
   return (
-    <section className="w-full h-dvh flex flex-col justify-center">
+    <section className="w-full h-dvh flex flex-col justify-center max-sm:hidden">
       <h2 className="mb-[4.5rem] text-center">Community Pillars</h2>
       <div className="w-full px-[1.875rem] flow-grid items-center">
         <div className="col-start-2 col-span-5 hover:z-10 row-start-1">

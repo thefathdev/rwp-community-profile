@@ -94,7 +94,7 @@ export default function Activities() {
   return (
     <section
       ref={containerRef}
-      className="w-full h-dvh flex flex-col justify-center relative"
+      className="w-full h-dvh flex flex-col justify-center relative max-sm:hidden"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

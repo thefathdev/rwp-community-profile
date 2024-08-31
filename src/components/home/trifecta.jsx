@@ -2,7 +2,7 @@ import Rotated3DContainer from "../ui/rotated-3d-container";
 
 export default function Trifecta() {
   return (
-    <section className="w-full h-dvh flex flex-col justify-center pb-[3.75rem]">
+    <section className="w-full h-dvh flex flex-col justify-center pb-[3.75rem max-sm:hidden">
       <h2 className="mb-[4.5rem] text-center">Community Trifecta</h2>
       <div className="w-full px-[1.875rem] flow-grid items-center">
         <div className="col-start-4 group/main col-span-5 hover:z-10 row-start-1 translate-y-[7.5rem] relative">
