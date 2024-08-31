@@ -52,7 +52,10 @@ export default function Gallery() {
           className="flex flex-nowrap items-end "
         >
           {GALLERY_IMAGES.map((image, i) => (
-            <div key={i} className="w-[33.3vw] pl-[6.25rem]">
+            <div
+              key={i}
+              className="w-[33.3vw] pl-[6.25rem] max-sm:w-[100vw] max-sm:pl-[4.5rem]"
+            >
               <ImageCard
                 src={image.src}
                 alt={image.alt}
