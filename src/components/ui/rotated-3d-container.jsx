@@ -25,9 +25,9 @@ export default function Rotated3DContainer({ children }) {
     ["30deg", "-30deg"]
   );
   const rotateX = useSpring(rotateXRaw, {
-    mass: 5,
-    stiffness: 200,
-    damping: 30,
+    mass: 2,
+    stiffness: 100,
+    damping: 20,
   });
 
   return (

@@ -14,6 +14,7 @@ import ScrollLine from "./scroll-line";
 import BlackBox from "./black-box";
 import Image from "next/image";
 import Rotated3DContainer from "@/components/ui/rotated-3d-container";
+import { GALLERY_IMAGES } from "./images";
 
 export default function Gallery() {
   const targetRef = useRef(null);
@@ -48,20 +49,18 @@ export default function Gallery() {
         <motion.div
           ref={stickySectionRef}
           style={{ translateX }}
-          className="flex flex-nowrap items-center "
+          className="flex flex-nowrap items-end "
         >
-          {Array(10)
-            .fill(0)
-            .map((_, i) => (
-              <div key={i} className="w-[33.3vw] pl-[6.25rem]">
-                <ImageCard
-                  src="/hero/1.png"
-                  alt="Image 1"
-                  title="Title 1"
-                  date="Date 1"
-                />
-              </div>
-            ))}
+          {GALLERY_IMAGES.map((image, i) => (
+            <div key={i} className="w-[33.3vw] pl-[6.25rem]">
+              <ImageCard
+                src={image.src}
+                alt={image.alt}
+                title={image.title}
+                date={image.date}
+              />
+            </div>
+          ))}
 
           <div aria-hidden className="w-[6.25rem]"></div>
         </motion.div>
