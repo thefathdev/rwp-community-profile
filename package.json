@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.111.5",
+    "@react-three/fiber": "^8.17.6",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.31",
+    "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.7"
+    "tailwind-merge": "^2.5.2",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "postcss": "^8",
