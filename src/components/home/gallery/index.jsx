@@ -80,7 +80,7 @@ export default function Gallery() {
 
 function ImageCard({ src, alt, title, date }) {
   return (
-    <div className="flex flex-col justify-end gap-20">
+    <div className="flex flex-col justify-end gap-20 ">
       <Rotated3DContainer>
         <img
           src={src}

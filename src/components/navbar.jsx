@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="flow-grid top-[1.875rem] w-full fixed inset-x-0">
+    <nav className="flow-grid top-[1.875rem] w-full fixed inset-x-0 z-50">
       <div>
         <Image src="/logo.png" alt="logo" width={95} height={30} />
       </div>
