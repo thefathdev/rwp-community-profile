@@ -110,7 +110,11 @@ export default function Activities() {
 
       <div className="absolute inset-0">
         <div className="absolute top-[15%] right-[10%] flex flex-col items-center">
-          <MagneticWrapper containerRef={containerRef} maxDistance={10}>
+          <MagneticWrapper
+            containerRef={containerRef}
+            maxDistance={15}
+            magneticStrength={0.25}
+          >
             <div className="hover:scale-150 hover:z-10 relative group origin-top-right transition-transform duration-500 ease-out ">
               <img
                 src="/activities/talk.jpeg"
@@ -120,14 +124,18 @@ export default function Activities() {
                 decoding="async"
               />
 
-              <p className="absolute left-0 top-0 pr-2.5 -translate-x-full transition-opacity duration-500 ease-out group-hover:opacity-0">
+              <p className="absolute left-0 top-0 pr-2.5 -translate-x-full transition-opacity duration-200 ease-out group-hover:opacity-0">
                 Remote Talk
               </p>
             </div>
           </MagneticWrapper>
         </div>
         <div className="absolute bottom-[5%] left-[8%] flex flex-col items-center">
-          <MagneticWrapper containerRef={containerRef} maxDistance={25}>
+          <MagneticWrapper
+            containerRef={containerRef}
+            maxDistance={10}
+            magneticStrength={0.4}
+          >
             <div className="hover:scale-150 hover:z-10 group relative origin-bottom-left transition-transform duration-500 ease-out ">
               <img
                 src="/activities/meetup.jpg"
@@ -137,14 +145,18 @@ export default function Activities() {
                 decoding="async"
               />
 
-              <p className="absolute right-0 bottom-0 pl-2.5 translate-x-full transition-opacity duration-500 ease-out group-hover:opacity-0">
+              <p className="absolute right-0 bottom-0 pl-2.5 translate-x-full transition-opacity duration-200 ease-out group-hover:opacity-0">
                 Remote Meetup
               </p>
             </div>
           </MagneticWrapper>
         </div>
         <div className="absolute bottom-[2%] right-[20%] flex flex-col items-center">
-          <MagneticWrapper containerRef={containerRef} maxDistance={5}>
+          <MagneticWrapper
+            containerRef={containerRef}
+            maxDistance={25}
+            magneticStrength={0.3}
+          >
             <div className="hover:scale-150 hover:z-10 group relative origin-bottom-right transition-transform duration-500 ease-out ">
               <img
                 src="/activities/work.jpg"
@@ -154,14 +166,18 @@ export default function Activities() {
                 decoding="async"
               />
 
-              <p className="absolute right-0 top-0 pl-2.5 translate-x-full transition-opacity duration-500 ease-out group-hover:opacity-0">
+              <p className="absolute right-0 top-0 pl-2.5 translate-x-full transition-opacity duration-200 ease-out group-hover:opacity-0">
                 We Work
               </p>
             </div>
           </MagneticWrapper>
         </div>
         <div className="absolute top-[10%] left-[15%] flex flex-col items-center ">
-          <MagneticWrapper containerRef={containerRef} maxDistance={20}>
+          <MagneticWrapper
+            containerRef={containerRef}
+            maxDistance={20}
+            magneticStrength={0.35}
+          >
             <div className="hover:scale-150 group hover:z-10 relative origin-top-left transition-transform duration-500 ease-out ">
               <img
                 src="/activities/edu.jpg"
@@ -171,7 +187,7 @@ export default function Activities() {
                 decoding="async"
               />
 
-              <p className="absolute right-0 top-0 pl-2.5 translate-x-full transition-opacity duration-500 ease-out group-hover:opacity-0">
+              <p className="absolute right-0 top-0 pl-2.5 translate-x-full transition-opacity duration-200 ease-out group-hover:opacity-0">
                 Edutainment
               </p>
             </div>

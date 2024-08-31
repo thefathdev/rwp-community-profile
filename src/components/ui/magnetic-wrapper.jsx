@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const MagneticWrapper = ({
   children,
-  magneticStrength = 0.5,
+  magneticStrength = 0.25,
   maxDistance = 100,
   containerRef,
 }) => {
@@ -51,7 +51,7 @@ const MagneticWrapper = ({
     <motion.div
       className="inline-block"
       animate={position}
-      transition={{ type: "spring", stiffness: 150, damping: 15 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20, mass: 1.5 }}
     >
       {children}
     </motion.div>
