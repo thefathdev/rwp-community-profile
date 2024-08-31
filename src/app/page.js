@@ -1,3 +1,4 @@
+import Activities from "@/components/home/activities";
 import Gallery from "@/components/home/gallery";
 import Hero from "@/components/home/hero";
 import Pillars from "@/components/home/pillars";
@@ -10,6 +11,7 @@ export default function Home() {
       <Gallery />
       <Pillars />
       <Trifecta />
+      <Activities />
     </>
   );
 }
