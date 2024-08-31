@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Marquee from "./magicui/marquee";
-import Rotated3DContainer from "./ui/rotated-3d-container";
-import TranslateZContainer from "./ui/translate-z-container";
+import Marquee from "../magicui/marquee";
+import Rotated3DContainer from "../ui/rotated-3d-container";
+import TranslateZContainer from "../ui/translate-z-container";
 
 export default function Hero() {
   return (

@@ -3,9 +3,12 @@
 import {
   motion,
   useMotionTemplate,
+  useMotionValue,
+  useMotionValueEvent,
   useScroll,
   useSpring,
   useTransform,
+  useVelocity,
 } from "framer-motion";
 import { useRef } from "react";
 import { useMeasure } from "react-use";
@@ -74,10 +77,22 @@ function BlackBox({ targetRef, finalPosition }) {
     damping: 25,
   });
 
+  const velocity = useVelocity(scrollYProgress);
+
+  const rotation = useTransform(
+    velocity,
+    [-0.5, 0, 0.5],
+    ["-30deg", "0deg", "30deg"]
+  );
+
   return (
     <motion.div
-      className="bg-black size-[1.875rem] absolute bottom-0 "
-      style={{ translateX: translateXSpring, translateY: "-100%" }}
+      className="bg-black size-[1.875rem] absolute bottom-0"
+      style={{
+        translateX: translateXSpring,
+        translateY: "-100%",
+        rotateZ: rotation,
+      }}
     ></motion.div>
   );
 }
