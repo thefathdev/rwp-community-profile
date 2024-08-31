@@ -8,7 +8,7 @@
   }
 
   .flow-grid {
-    @apply grid grid-cols-[repeat(15,minmax(0,1fr))] max-sm:grid-cols-5 max-sm:gap-[15px] max-sm:px-[15px] uppercase font-normal gap-[1.875rem] px-[1.875rem];
+    @apply grid grid-cols-[repeat(15,minmax(0,1fr))] max-sm:grid-cols-6 max-sm:gap-[15px] max-sm:px-[15px] uppercase font-normal gap-[1.875rem] px-[1.875rem];
   }
 
   .heading-1 {

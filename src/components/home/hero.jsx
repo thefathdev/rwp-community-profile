@@ -46,7 +46,7 @@ export default function Hero() {
 
       {/* Copy */}
       <div className="flow-grid w-full items-end">
-        <div className="sm:hidden col-start-1 col-span-4 mb-[6.25rem]">
+        <div className="sm:hidden col-start-1 col-span-5 mb-[6.25rem]">
           <p className="w-full">
             A Collaborative & Supportive Circle for All Remote Workers and
             Professionals in Pontianak
@@ -64,7 +64,7 @@ export default function Hero() {
           </p>
           <span>Scroll Down to see more</span>
         </div>
-        <div className="col-span-1 col-start-[15] max-sm:col-start-5 flex items-center justify-end">
+        <div className="col-span-1 col-start-[15] max-sm:col-start-6 flex items-center justify-end">
           <MouseWheel />
         </div>
       </div>
