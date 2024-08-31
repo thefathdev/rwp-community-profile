@@ -10,6 +10,7 @@ export default function Activities() {
   const containerRef = useRef(null);
   const [imageCenters, setImageCenters] = useState([]);
   const [centerPoint, setCenterPoint] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
 
   const updatePositions = useCallback(() => {
     const container = containerRef.current;
@@ -66,26 +67,36 @@ export default function Activities() {
       });
     };
 
-    drawLines();
-
-    // Set up an animation loop to continuously update the lines
     let animationFrameId;
     const animate = () => {
-      updatePositions();
-      drawLines();
-      animationFrameId = requestAnimationFrame(animate);
+      if (isHovered) {
+        updatePositions();
+        drawLines();
+        animationFrameId = requestAnimationFrame(animate);
+      }
     };
-    animate();
+
+    if (isHovered) {
+      animate();
+    } else {
+      cancelAnimationFrame(animationFrameId);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
 
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [imageCenters, centerPoint, updatePositions]);
+  }, [imageCenters, centerPoint, updatePositions, isHovered]);
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
 
   return (
     <section
       ref={containerRef}
       className="w-full h-dvh flex flex-col justify-center relative"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <canvas
         ref={canvasRef}
