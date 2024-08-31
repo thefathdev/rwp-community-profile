@@ -22,16 +22,13 @@ export default function Rotated3DContainer({ children }) {
   const rotateXRaw = useTransform(
     scrollVelocity,
     [-0.5, 0.5],
-    ["45deg", "-45deg"]
+    ["30deg", "-30deg"]
   );
   const rotateX = useSpring(rotateXRaw, {
     mass: 5,
     stiffness: 200,
     damping: 30,
   });
-
-  // const skewYRaw = useTransform(scrollVelocity, [-0.5, 0.5], ["-2deg", "2deg"]);
-  // const skewY = useSpring(skewYRaw, { mass: 3, stiffness: 100, damping: 20 });
 
   return (
     <motion.div
