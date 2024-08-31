@@ -12,6 +12,6 @@
   }
 
   .heading-1 {
-    @apply text-8xl font-semibold leading-none tracking-normal;
+    @apply text-[8rem] font-medium leading-none tracking-normal;
   }
 }

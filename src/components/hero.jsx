@@ -3,39 +3,45 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Marquee from "./magicui/marquee";
+import Rotated3DContainer from "./ui/rotated-3d-container";
+import TranslateZContainer from "./ui/translate-z-container";
 
 export default function Hero() {
   return (
-    <main className="flex items-end w-full h-dvh py-[1.875rem]">
+    <main className="flex items-end w-full h-dvh py-[1.875rem] relative overflow-hidden">
       <h1 className="sr-only">Remote Worker Pontianak</h1>
 
       {/* Main Text and Image */}
       <div className="absolute w-full top-1/2 -translate-y-1/2">
-        <Image
-          src="/hero/1.png"
-          alt=""
-          width={400}
-          height={400}
-          className="absolute z-[2] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-          quality={100}
-        />
-        <div className="flex  items-center justify-center">
-          <Marquee className={"[--duration:10s]"}>
-            <span className="heading-1 text-center  ">
-              Remote Worker Pontianak
-            </span>
-          </Marquee>
-        </div>
+        <Rotated3DContainer>
+          <Image
+            src="/hero/1.png"
+            alt=""
+            width={400}
+            height={400}
+            className="absolute z-[2] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+            quality={100}
+          />
+          <TranslateZContainer>
+            <div className="flex items-center justify-center overflow-visible relative">
+              <Marquee className={"[--duration:10s] overflow-visible"}>
+                <span className="heading-1 text-center  ">
+                  Remote Worker Pontianak
+                </span>
+              </Marquee>
+            </div>
+          </TranslateZContainer>
 
-        <div className="w-[400px] z-[5] h-[400px] overflow-hidden absolute flex justify-center items-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-          <div className="absolute w-screen">
-            <Marquee className={"[--duration:10s]"}>
-              <span className="heading-1 text-white text-center whitespace-nowrap">
-                Remote Worker Pontianak
-              </span>
-            </Marquee>
+          <div className="w-[400px] z-[5] h-[400px] overflow-hidden absolute flex justify-center items-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+            <div className="absolute w-screen">
+              <Marquee className={"[--duration:10s]"}>
+                <span className="heading-1 text-white text-center whitespace-nowrap">
+                  Remote Worker Pontianak
+                </span>
+              </Marquee>
+            </div>
           </div>
-        </div>
+        </Rotated3DContainer>
       </div>
 
       {/* Copy */}
