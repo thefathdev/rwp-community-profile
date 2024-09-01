@@ -2,10 +2,18 @@
 
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import Rotated3DContainer from "../ui/rotated-3d-container";
-import MagneticWrapper from "../ui/magnetic-wrapper";
+import MagneticWrapper from "../../ui/magnetic-wrapper";
+import { useMeasure, useMedia } from "react-use";
+import VerticalScrollLine from "./vertical-scroll-line";
+import VerticalBlackBox from "./vertical-black-box";
 
 export default function Activities() {
+  const isMobile = useMedia("(max-width: 640px)", true);
+
+  return isMobile ? <MobileActivities /> : <DesktopActivities />;
+}
+
+function DesktopActivities() {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const [imageCenters, setImageCenters] = useState([]);
@@ -211,5 +219,85 @@ function RotatingBlackBox() {
         repeat: Infinity,
       }}
     ></motion.div>
+  );
+}
+
+function MobileActivities() {
+  const containerRef = useRef(null);
+  const [trackerRef, { height: trackerHeight }] = useMeasure();
+
+  return (
+    <section
+      ref={containerRef}
+      className="w-full h-[290dvh]  relative sm:hidden"
+    >
+      <div className="sticky top-0 pt-[6.25rem] overflow-hidden flex flex-col">
+        <h2 className="mb-[2.5rem] text-center">Activities</h2>
+      </div>
+      <div
+        className="sticky top-[7.5rem] h-[80dvh]  overflow-hidden flex flex-col"
+        ref={trackerRef}
+      >
+        <VerticalScrollLine targetRef={containerRef} />
+        <VerticalBlackBox
+          targetRef={containerRef}
+          finalPosition={trackerHeight}
+        />
+      </div>
+      <div className="relative flex-col -mt-[50dvh] flex items-center gap-[6.25rem] w-full">
+        <div className="sticky top-[12.5rem]  hover:scale-125 hover:z-10 group origin-center flex flex-col items-start transition-transform duration-500 ease-out ">
+          <img
+            src="/activities/meetup.jpg"
+            alt="remote meetup"
+            className="max-w-[275px]"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p className="relative bg-white transition-opacity duration-200 ease-out group-hover:opacity-0">
+            Remote Meetup
+          </p>
+        </div>
+        <div className="hover:scale-125 top-[15rem] hover:z-10 sticky group origin-center flex flex-col items-start transition-transform duration-500 ease-out ">
+          <img
+            src="/activities/talk.jpeg"
+            alt="remote talk"
+            className="max-w-[265px]"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p className="relative bg-white transition-opacity duration-200 ease-out group-hover:opacity-0">
+            Remote Talk
+          </p>
+        </div>
+        <div className="hover:scale-125 top-[17.5rem] hover:z-10 sticky group origin-center flex flex-col items-start transition-transform duration-500 ease-out ">
+          <img
+            src="/activities/work.jpg"
+            alt="we work"
+            className="max-w-[290px]"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p className="relative bg-white transition-opacity duration-200 ease-out group-hover:opacity-0">
+            We Work
+          </p>
+        </div>
+        <div className="hover:scale-125 top-[20rem] hover:z-10 sticky group origin-center flex flex-col items-start transition-transform duration-500 ease-out ">
+          <img
+            src="/activities/edu.jpg"
+            alt="remote edutainment"
+            className="max-w-[275px]"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p className="relative bg-white transition-opacity duration-200 ease-out group-hover:opacity-0">
+            Edutainment
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
