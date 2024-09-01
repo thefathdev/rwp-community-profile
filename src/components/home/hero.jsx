@@ -53,7 +53,12 @@ export default function Hero() {
           </p>
         </div>
         <div className="col-span-3 col-start-1">
-          <a href="/" className="underline">
+          <a
+            href="https://www.instagram.com/remoteworkerpnk/"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-[1.875rem] underline"
+          >
             Let&apos;s connect
           </a>
         </div>
