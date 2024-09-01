@@ -17,7 +17,7 @@ export default function VerticalBlackBox({ targetRef, finalPosition }) {
   const translateYRaw = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, finalPosition - 30]
+    [0, finalPosition - 30],
   );
 
   const translateYSpring = useSpring(translateYRaw, {
@@ -31,12 +31,12 @@ export default function VerticalBlackBox({ targetRef, finalPosition }) {
   const rotation = useTransform(
     velocity,
     [-0.5, 0, 0.5],
-    ["-30deg", "0deg", "30deg"]
+    ["-30deg", "0deg", "30deg"],
   );
 
   return (
     <motion.div
-      className="bg-black size-[1.875rem] absolute top-0 "
+      className="absolute top-0 size-[1.875rem] bg-black"
       style={{
         translateY: translateYSpring,
         translateX: "50%",

@@ -2,21 +2,21 @@ import Rotated3DContainer from "../ui/rotated-3d-container";
 
 export default function Pillars() {
   return (
-    <section className="w-full h-dvh flex flex-col justify-center ">
+    <section className="flex h-dvh w-full flex-col justify-center">
       <h2 className="mb-[4.5rem] text-center">Community Pillars</h2>
-      <div className="w-full px-[1.875rem] flow-grid items-center max-sm:items-start">
-        <div className="col-start-2  col-span-5 group/main hover:z-10 row-start-1 max-sm:col-start-1 max-sm:col-span-4 max-sm:row-start-1">
+      <div className="flow-grid w-full items-center px-[1.875rem] max-sm:items-start">
+        <div className="group/main col-span-5 col-start-2 row-start-1 hover:z-10 max-sm:col-span-4 max-sm:col-start-1 max-sm:row-start-1">
           <Rotated3DContainer>
-            <div className="border max-sm:z-[2] max-sm:relative border-black group hover:scale-125 max-sm:hover:scale-[140%] max-sm:origin-top-left transition-transform duration-700 ease-out origin-bottom-left w-full  aspect-[5/4] mb-3 flex items-center justify-center">
+            <div className="group mb-3 flex aspect-[5/4] w-full origin-bottom-left items-center justify-center border border-black transition-transform duration-700 ease-out hover:scale-125 max-sm:relative max-sm:z-[2] max-sm:origin-top-left max-sm:hover:scale-[140%]">
               <span
-                className="text-black/20 group-hover:text-black/0 transition-colors duration-700 max-sm:hidden"
+                className="text-black/20 transition-colors duration-700 group-hover:text-black/0 max-sm:hidden"
                 aria-hidden
               >
                 Hover to see more
               </span>
 
               <video
-                className="absolute w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity ease-out duration-700"
+                className="absolute h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
                 muted
                 autoPlay
                 loop
@@ -30,18 +30,18 @@ export default function Pillars() {
           </Rotated3DContainer>
           <p className="max-sm:hidden">Continuous Learning</p>
         </div>
-        <div className="col-start-6 col-span-5 row-start-1 hover:z-10 max-sm:col-start-2 max-sm:col-span-4 max-sm:row-start-1 max-sm:mt-[125px]">
+        <div className="col-span-5 col-start-6 row-start-1 hover:z-10 max-sm:col-span-4 max-sm:col-start-2 max-sm:row-start-1 max-sm:mt-[125px]">
           <Rotated3DContainer>
-            <div className="border max-sm:z-[2] max-sm:relative border-black w-full aspect-square mb-3 max-sm:hover:scale-[140%] group hover:scale-125 max-sm:origin-center  transition-transform duration-700 ease-out origin-bottom max-sm:flex max-sm:items-center max-sm:justify-center">
+            <div className="group mb-3 aspect-square w-full origin-bottom border border-black transition-transform duration-700 ease-out hover:scale-125 max-sm:relative max-sm:z-[2] max-sm:flex max-sm:origin-center max-sm:items-center max-sm:justify-center max-sm:hover:scale-[140%]">
               <span
-                className="text-black/20 group-hover:text-black/0 transition-colors duration-700 sm:hidden"
+                className="text-black/20 transition-colors duration-700 group-hover:text-black/0 sm:hidden"
                 aria-hidden
               >
                 Click to see more
               </span>
 
               <video
-                className="absolute w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity ease-out duration-700"
+                className="absolute h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
                 muted
                 autoPlay
                 loop
@@ -57,11 +57,11 @@ export default function Pillars() {
             Personal & Professional Growth
           </p>
         </div>
-        <div className="col-start-10 col-span-5 row-start-1 hover:z-10  max-sm:origin-bottom-right max-sm:col-start-3 max-sm:col-span-4 max-sm:row-start-1 max-sm:mt-[300px]">
+        <div className="col-span-5 col-start-10 row-start-1 hover:z-10 max-sm:col-span-4 max-sm:col-start-3 max-sm:row-start-1 max-sm:mt-[300px] max-sm:origin-bottom-right">
           <Rotated3DContainer>
-            <div className="border max-sm:z-[2] max-sm:relative border-black w-full aspect-[10/9] mb-3 group hover:scale-125 max-sm:hover:scale-[140%]  transition-transform duration-700 ease-out origin-bottom-right">
+            <div className="group mb-3 aspect-[10/9] w-full origin-bottom-right border border-black transition-transform duration-700 ease-out hover:scale-125 max-sm:relative max-sm:z-[2] max-sm:hover:scale-[140%]">
               <video
-                className="absolute w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity ease-out duration-700"
+                className="absolute h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
                 muted
                 autoPlay
                 loop

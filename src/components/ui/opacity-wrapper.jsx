@@ -17,7 +17,7 @@ export default function OpacityWrapper({ children }) {
       ref={ref}
       style={{ opacity }}
       whileHover={{ opacity: 1 }}
-      className="w-full flex flex-col"
+      className="flex w-full flex-col"
     >
       {children}
     </motion.div>

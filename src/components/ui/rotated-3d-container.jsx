@@ -22,7 +22,7 @@ export default function Rotated3DContainer({ children }) {
   const rotateXRaw = useTransform(
     scrollVelocity,
     [-0.5, 0.5],
-    ["30deg", "-30deg"]
+    ["30deg", "-30deg"],
   );
   const rotateX = useSpring(rotateXRaw, {
     mass: 2,
@@ -36,7 +36,7 @@ export default function Rotated3DContainer({ children }) {
         transformStyle: "preserve-3d",
         perspective: 1000,
       }}
-      className="origin-center relative overflow-visible"
+      className="relative origin-center overflow-visible"
     >
       <motion.div
         style={{

@@ -25,9 +25,9 @@ export default function ScrollLine({ targetRef }) {
   const lineWidth = useMotionTemplate`${lineWidthSpring}%`;
 
   return (
-    <div className="w-full bg-black/20 h-0.5">
+    <div className="h-0.5 w-full bg-black/20">
       <motion.div
-        className="bg-black h-full"
+        className="h-full bg-black"
         style={{ width: lineWidth }}
       ></motion.div>
     </div>

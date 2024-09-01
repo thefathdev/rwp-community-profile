@@ -41,7 +41,7 @@ const MagneticWrapper = ({
         containerRef.current.removeEventListener("mousemove", handleMouseMove);
         containerRef.current.removeEventListener(
           "mouseleave",
-          handleMouseLeave
+          handleMouseLeave,
         );
       }
     };

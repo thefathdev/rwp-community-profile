@@ -2,14 +2,14 @@ import Rotated3DContainer from "../ui/rotated-3d-container";
 
 export default function Trifecta() {
   return (
-    <section className="w-full h-dvh flex flex-col justify-center pb-[3.75rem] max-sm:pb-[225px]">
+    <section className="flex h-dvh w-full flex-col justify-center pb-[3.75rem] max-sm:pb-[225px]">
       <h2 className="mb-[4.5rem] text-center">Community Trifecta</h2>
-      <div className="w-full px-[1.875rem] flow-grid items-center">
-        <div className="col-start-4 max-sm:col-start-2 max-sm:translate-y-[150px] group/main col-span-5 hover:z-10 row-start-1 translate-y-[7.5rem] relative">
+      <div className="flow-grid w-full items-center px-[1.875rem]">
+        <div className="group/main relative col-span-5 col-start-4 row-start-1 translate-y-[7.5rem] hover:z-10 max-sm:col-start-2 max-sm:translate-y-[150px]">
           <Rotated3DContainer>
-            <div className="border  border-black group hover:scale-125 max-sm:hover:scale-110 transition-transform duration-700 ease-out max-sm:origin-bottom-right origin-bottom-left w-full max-sm:aspect-square aspect-[5/4] mb-3 ">
+            <div className="group mb-3 aspect-[5/4] w-full origin-bottom-left border border-black transition-transform duration-700 ease-out hover:scale-125 max-sm:aspect-square max-sm:origin-bottom-right max-sm:hover:scale-110">
               <video
-                className="absolute w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity ease-out duration-700"
+                className="absolute h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
                 muted
                 autoPlay
                 loop
@@ -17,51 +17,51 @@ export default function Trifecta() {
                 <source src="/trifecta/aspiration.mp4" type="video/mp4" />
               </video>
             </div>
-            <p className="absolute bottom-0 right-0 p-2.5 sm:hidden group-hover/main:opacity-0 transition-opacity ease-out duration-200">
+            <p className="absolute bottom-0 right-0 p-2.5 transition-opacity duration-200 ease-out group-hover/main:opacity-0 sm:hidden">
               Aspiration
             </p>
           </Rotated3DContainer>
-          <p className="absolute max-sm:hidden bottom-0 group-hover/main:opacity-0 transition-opacity ease-out duration-700 -translate-y-1/2 right-0 translate-x-full pl-2.5">
+          <p className="absolute bottom-0 right-0 -translate-y-1/2 translate-x-full pl-2.5 transition-opacity duration-700 ease-out group-hover/main:opacity-0 max-sm:hidden">
             Aspiration
           </p>
         </div>
-        <div className="col-start-6 max-sm:col-start-1 max-sm:translate-y-[90px] group/main col-span-5 row-start-1 hover:z-10 relative">
+        <div className="group/main relative col-span-5 col-start-6 row-start-1 hover:z-10 max-sm:col-start-1 max-sm:translate-y-[90px]">
           <Rotated3DContainer>
-            <div className="border border-black w-full aspect-square mb-3 group hover:scale-125 max-sm:hover:scale-110 transition-transform max-sm:aspect-square duration-700 ease-out max-sm:origin-left origin-bottom flex max-sm:items-center justify-center">
+            <div className="group mb-3 flex aspect-square w-full origin-bottom justify-center border border-black transition-transform duration-700 ease-out hover:scale-125 max-sm:aspect-square max-sm:origin-left max-sm:items-center max-sm:hover:scale-110">
               <span
-                className="text-black/20 max-sm:hidden group-hover:text-black/0 transition-colors duration-700 mt-2.5"
+                className="mt-2.5 text-black/20 transition-colors duration-700 group-hover:text-black/0 max-sm:hidden"
                 aria-hidden
               >
                 Hover to see more
               </span>
               <span
-                className="text-black/20 sm:hidden group-hover:text-black/0 transition-colors duration-700 mt-2.5"
+                className="mt-2.5 text-black/20 transition-colors duration-700 group-hover:text-black/0 sm:hidden"
                 aria-hidden
               >
                 Click to see more
               </span>
               <video
-                className="absolute w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity ease-out duration-700"
+                className="absolute h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
                 muted
                 autoPlay
                 loop
               >
                 <source src="/trifecta/collaboration.mp4" type="video/mp4" />
               </video>
-              <p className="absolute bottom-0 left-0 p-2.5 sm:hidden group-hover/main:opacity-0 transition-opacity ease-out duration-200">
+              <p className="absolute bottom-0 left-0 p-2.5 transition-opacity duration-200 ease-out group-hover/main:opacity-0 sm:hidden">
                 Collaboration
               </p>
             </div>
           </Rotated3DContainer>
-          <p className="absolute max-sm:hidden top-0 group-hover/main:opacity-0 transition-opacity ease-out duration-700  left-0 -translate-x-full pr-2.5">
+          <p className="absolute left-0 top-0 -translate-x-full pr-2.5 transition-opacity duration-700 ease-out group-hover/main:opacity-0 max-sm:hidden">
             Collaboration
           </p>
         </div>
-        <div className="col-start-7 max-sm:col-start-1 max-sm:translate-y-0 max-sm:translate-x-[12.5%]  group/main relative col-span-5 row-start-1 hover:z-10 translate-y-[3.5rem]">
+        <div className="group/main relative col-span-5 col-start-7 row-start-1 translate-y-[3.5rem] hover:z-10 max-sm:col-start-1 max-sm:translate-x-[12.5%] max-sm:translate-y-0">
           <Rotated3DContainer>
-            <div className="border max-sm:relative max-sm:z-[2] border-black w-full aspect-[10/9] max-sm:aspect-square mb-3 group hover:scale-125 max-sm:hover:scale-110 transition-transform duration-700 ease-out max-sm:origin-center origin-bottom-right">
+            <div className="group mb-3 aspect-[10/9] w-full origin-bottom-right border border-black transition-transform duration-700 ease-out hover:scale-125 max-sm:relative max-sm:z-[2] max-sm:aspect-square max-sm:origin-center max-sm:hover:scale-110">
               <video
-                className="absolute w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity ease-out duration-700"
+                className="absolute h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
                 muted
                 autoPlay
                 loop
@@ -69,11 +69,11 @@ export default function Trifecta() {
                 <source src="/trifecta/inspiration.mp4" type="video/mp4" />
               </video>
             </div>
-            <p className="absolute top-0 right-0 p-2.5 sm:hidden group-hover/main:opacity-0 transition-opacity ease-out duration-200">
+            <p className="absolute right-0 top-0 p-2.5 transition-opacity duration-200 ease-out group-hover/main:opacity-0 sm:hidden">
               Inspiration
             </p>
           </Rotated3DContainer>
-          <p className="absolute max-sm:hidden top-0 group-hover/main:opacity-0 transition-opacity ease-out duration-700  right-0 translate-x-full pl-2.5">
+          <p className="absolute right-0 top-0 translate-x-full pl-2.5 transition-opacity duration-700 ease-out group-hover/main:opacity-0 max-sm:hidden">
             Inspiration
           </p>
         </div>

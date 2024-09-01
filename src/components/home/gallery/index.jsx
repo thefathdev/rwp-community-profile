@@ -32,7 +32,7 @@ export default function Gallery() {
   const translateXRaw = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, -(stickySectionWidth - windowWidth)]
+    [0, -(stickySectionWidth - windowWidth)],
   );
 
   const translateX = useSpring(translateXRaw, {
@@ -43,13 +43,13 @@ export default function Gallery() {
   });
 
   return (
-    <section className="w-full h-[700dvh] relative" ref={targetRef}>
-      <div className="sticky top-0 h-dvh overflow-hidden flex items-center">
+    <section className="relative h-[700dvh] w-full" ref={targetRef}>
+      <div className="sticky top-0 flex h-dvh items-center overflow-hidden">
         {/* Image Cards */}
         <motion.div
           ref={stickySectionRef}
           style={{ translateX }}
-          className="flex flex-nowrap items-end "
+          className="flex flex-nowrap items-end"
         >
           {GALLERY_IMAGES.map((image, i) => (
             <div
@@ -83,7 +83,7 @@ export default function Gallery() {
 
 function ImageCard({ src, alt, title, date }) {
   return (
-    <div className="flex flex-col justify-end gap-20 ">
+    <div className="flex flex-col justify-end gap-20">
       <Rotated3DContainer>
         <img
           src={src}
@@ -95,8 +95,8 @@ function ImageCard({ src, alt, title, date }) {
       </Rotated3DContainer>
 
       <div className="flex flex-col items-center gap-[0.625rem]">
-        <span className=" text-black">{title}</span>
-        <span className=" text-black/50">{date}</span>
+        <span className="text-black">{title}</span>
+        <span className="text-black/50">{date}</span>
       </div>
     </div>
   );

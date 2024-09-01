@@ -25,9 +25,9 @@ export default function VerticalScrollLine({ targetRef }) {
   const lineHeight = useMotionTemplate`${lineHeightSpring}%`;
 
   return (
-    <div className="h-full bg-black/20 w-0.5  absolute left-[15px] top-0">
+    <div className="absolute left-[15px] top-0 h-full w-0.5 bg-black/20">
       <motion.div
-        className="bg-black w-full"
+        className="w-full bg-black"
         style={{ height: lineHeight }}
       ></motion.div>
     </div>

@@ -22,7 +22,7 @@ export default function TranslateZContainer({ children }) {
   const translateZRaw = useTransform(
     scrollVelocity,
     [-0.5, 0, 0.5],
-    ["-500px", "0px", "-500px"]
+    ["-500px", "0px", "-500px"],
   );
   const translateZ = useSpring(translateZRaw, {
     mass: 1,
@@ -37,7 +37,7 @@ export default function TranslateZContainer({ children }) {
         transformStyle: "preserve-3d",
         perspective: 1000,
       }}
-      className="origin-center relative overflow-visible"
+      className="relative origin-center overflow-visible"
     >
       <motion.div
         style={{
